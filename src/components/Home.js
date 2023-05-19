@@ -1,9 +1,10 @@
 import React,{useContext, useState} from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import TicketContext from '../context/ticket/Ticketcontext'
 
 export default function Home() {
 
+    const navigate = useNavigate();
     const context = useContext(TicketContext);
     const {getTicketDetail} = context;
 
@@ -15,18 +16,19 @@ export default function Home() {
 
     const handleBookTicket = () =>{
         getTicketDetail(st.from,st.to);
+        navigate('/preview');
     }
 
     return (
-        <div className='text-center'>
-            <h2 className='text-red-600 font-bold text-3xl my-8 mb-8'>Welcome to Delhi Metro</h2>
-            <div className='w-96 m-auto border-2 py-5 rounded'>
+        <div className='text-center px-5'>
+            <h2 className='text-red-600 font-bold text-3xl my-8 mb-8 max-[425px]:text-2xl'>Welcome to Delhi Metro</h2>
+            <div className='w-96 m-auto border-2 py-5 rounded max-[425px]:w-full'>
                 <h4 className='text-red-600 font-bold text-xl'>Book Your Ticket Now</h4>
-                <form className='space-y-4'> 
+                <form className='space-y-4'  onSubmit={handleBookTicket}> 
                     <label htmlFor="from"></label><br />
-                    <input className='w-4/5 p-2 rounded border-[1px] hover:border-black' type="text" id="from" name="from" placeholder='From' list='stations' value={st.from} autoComplete='off' onChange={onchange} /><br />
+                    <input required className='w-4/5 p-2 rounded border-[1px] hover:border-black' type="text" id="from" name="from" placeholder='From' list='stations' value={st.from} autoComplete='off' onChange={onchange} /><br />
                     <label htmlFor="to"></label><br />
-                    <input className='w-4/5 p-2 rounded border-[1px] hover:border-black' type="to" id="to" name="to" placeholder='To' list='stations' value={st.to} autoComplete='off'  onChange={onchange} /><br /><br />
+                    <input required className='w-4/5 p-2 rounded border-[1px] hover:border-black' type="text" id="to" name="to" placeholder='To' list='stations' value={st.to} autoComplete='off'  onChange={onchange} /><br /><br />
                     <datalist id='stations'>
                         <option value='Shaheed Sthal'>Shaheed Sthal</option>
                         <option value='Hindon'>Hindon</option>
@@ -59,7 +61,7 @@ export default function Home() {
                         <option value='Rithala'>Rithala</option>
                     </datalist>
                     <div className='text-center'>
-                        <Link onClick={handleBookTicket} className='text-white transition-all font-semibold bg-red-600 px-6 py-1 rounded hover:text-red-600 border-red-600 border-[1px] hover:bg-white' to='/preview'>Book Ticket</Link>
+                        <input className='text-white transition-all font-semibold bg-red-600 px-6 py-1 rounded hover:text-red-600 border-red-600 border-[1px] hover:bg-white' type="submit"/>
                     </div>
                 </form>
             </div>

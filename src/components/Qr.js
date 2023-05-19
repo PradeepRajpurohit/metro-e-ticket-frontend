@@ -27,7 +27,7 @@ export default function Qr() {
   }
 
   return (
-    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded'>
+    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded max-[425px]:w-72'>
       <h2 className='text-2xl font-bold text-center'>Your QR Ticket</h2><br />
       {/* <div className='flex border-2 rounded'>
         <div className='p-0 flex justify-center w-1/4 bg-red-600 rounded-r'>

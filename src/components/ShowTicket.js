@@ -22,7 +22,8 @@ export default function ShowTicket() {
   
 
   return (
-    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded' >
+    <div className='px-5'>
+    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded max-[425px]:w-full' >
       <h2 className='text-2xl font-bold text-center'>Your Ticket</h2><br />
       {localStorage.getItem("authToken") && tickets.map((ticket)=>{
         return <ShowTicketItems key={ticket._id} ticket={ticket} way={ticket.way} ticketlogo={ticketlogo}/>
@@ -36,6 +37,7 @@ export default function ShowTicket() {
 
 
     </div >
+    </div>
 
   )
 }

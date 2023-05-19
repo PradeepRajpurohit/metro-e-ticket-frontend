@@ -11,7 +11,8 @@ export default function Preview() {
     const handlePreview=()=>{
         if(localStorage.getItem("authToken")){
             generateTicket(ticket.origin,ticket.destination,ticket.fare,ticket.way)
-            navigate("/qrticket")
+            navigate("/payment")
+            
         }
         else{
             navigate("/signin")
@@ -19,7 +20,7 @@ export default function Preview() {
     }
 
     return (
-        <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded'>
+        <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded max-[425px]:w-72'>
             <h2 className='text-2xl font-bold text-center'>Preview Ticket Details</h2><br />
             <h4 className='text-xl font-bold'>From : </h4><br />
             <p>{ticket.origin}</p><br />
@@ -31,7 +32,7 @@ export default function Preview() {
             <p>{ticket.fare} Rs</p><br />
             <div className='flex justify-between'>
                 <Link className='text-white transition-all font-semibold bg-red-600 px-6 py-1 rounded hover:text-red-600 border-red-600 border-[1px] hover:bg-white' to='/'>Back</Link>
-                <button onClick={handlePreview} className='text-white transition-all font-semibold bg-red-600 px-6 py-1 rounded hover:text-red-600 border-red-600 border-[1px] hover:bg-white'>Confirm Ticket</button>
+                <button onClick={handlePreview} className='text-white transition-all font-semibold bg-red-600 px-6 py-1 rounded hover:text-red-600 border-red-600 border-[1px] hover:bg-white'>Buy Ticket</button>
             </div>
 
 

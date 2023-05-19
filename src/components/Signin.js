@@ -39,7 +39,8 @@ export default function Signin() {
     }
 
     return (
-        <div className='items-center text-center h-full w-96 my-5 m-auto bg-gray-200 rounded py-8'>
+        <div className='px-5'>
+        <div className='items-center text-center h-full w-96 my-5 m-auto bg-gray-200 rounded py-8 max-[425px]:w-full'>
             <img className='m-auto' src={metro} alt=""></img>
             <h2 className='text-red-600 font-bold text-3xl'>Delhi Metro</h2>
             <form onSubmit={handleSubmit}>
@@ -55,6 +56,7 @@ export default function Signin() {
 
 
 
+        </div>
         </div>
     )
 }

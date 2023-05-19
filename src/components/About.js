@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='py-4 px-24 text-red-600'>
+    <div className='py-4 px-24 text-red-600 max-[425px]:px-5'>
       <p className='font-bold text-3xl my-4'>About Our Metro Ticket Generating Project</p>
 
-      <p>Our metro ticket generating project is a cutting-edge software solution designed to provide a hassle-free and efficient way of generating metro tickets for commuters. This project is aimed at solving the problems faced by commuters who need to purchase tickets for metro travel every day.<br/><br/>
+      <p className='text-justify'>Our metro ticket generating project is a cutting-edge software solution designed to provide a hassle-free and efficient way of generating metro tickets for commuters. This project is aimed at solving the problems faced by commuters who need to purchase tickets for metro travel every day.<br/><br/>
 
       Our ticket generator uses advanced algorithms and machine learning techniques to generate customized tickets that cater to the unique needs of each commuter. With this project, commuters no longer have to stand in long queues at the metro stations to purchase tickets. Instead, they can simply generate their own personalized tickets using our user-friendly platform.<br/><br/>
 

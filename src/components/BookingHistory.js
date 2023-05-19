@@ -21,7 +21,8 @@ export default function ShowTicket() {
     // eslint-disable-next-line
   },[])
   return (
-    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded'>
+    <div className='px-5'>
+    <div className='w-96 border-2 m-auto p-4 my-5 text-red-600 rounded max-[425px]:w-full'>
       <h2 className='text-2xl font-bold text-center'>Booking History</h2><br />
 
       {localStorage.getItem("authToken") && prevtickets.map((prevticket)=>{
@@ -35,6 +36,7 @@ export default function ShowTicket() {
 
 
     </div >
+    </div>
 
   )
 }

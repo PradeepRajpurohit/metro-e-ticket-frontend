@@ -14,7 +14,7 @@ export default function ShowTicketItems(props) {
       navigate("/qrticket")
       }
   return (
-      <div onClick={handleTicket} className='flex border-2 rounded cursor-pointer'>
+      <div onClick={handleTicket} className='flex border-2 rounded cursor-pointer max-[425px]:text-xs'>
         <div className='p-0 flex justify-center w-1/4 bg-red-600 rounded-r'>
           <img src={props.ticketlogo} alt=''></img>
         </div>

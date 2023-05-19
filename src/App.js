@@ -11,6 +11,7 @@ import About from './components/About';
 import ShowTicket from './components/ShowTicket';
 import BookingHistory from './components/BookingHistory';
 import TicketState from './context/ticket/TicketState';
+import Payment from './components/Payment';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />}></Route>
             <Route exact path='/preview' element={<Preview />}></Route>
+            <Route exact path='/payment' element={<Payment />}></Route>
             <Route exact path='/qrticket' element={<Qr />}></Route>
             <Route exact path='/about' element={<About />}></Route>
             <Route exact path='/showticket' element={<ShowTicket />}></Route>
